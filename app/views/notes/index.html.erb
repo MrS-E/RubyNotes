@@ -1,0 +1,22 @@
+<h1>Notizen</h1>
+<p>
+  <%= link_to 'Abmelden', logout_path %>
+  <br>
+  <%= link_to 'Neue Notiz', new_note_url %>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.title %></td>
+        <td><%= note.text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

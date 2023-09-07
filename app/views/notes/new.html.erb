@@ -1,0 +1,11 @@
+<h1>Neue Notiz</h1>
+<div>
+  <%= form_for @note do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :content %>
+      <%= f.text_area :text %>
+      <%= f.submit 'Neue Notiz' %>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1>Anmeldung</h1>
+  <%=form_tag '/login' do %>
+    Nutzername: <%=text_field_tag :username%>
+    Passwort: <%= password_field_tag :password %>
+    <%= submit_tag "Anmelden" %>
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+  <%end %>
+  <p>Kein Konto? <%= link_to 'Registrierung', new_user_path %></p>
+</div>

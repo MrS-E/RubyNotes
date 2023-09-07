@@ -1,0 +1,11 @@
+<h1>Neuer User</h1>
+<div>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Neuer Account" %>
+    <p>Schon Registriert? <%= link_to 'Anmeldung', root_path %></p>
+    <% end %>
+</div>
